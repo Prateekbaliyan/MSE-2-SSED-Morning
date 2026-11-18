@@ -126,7 +126,7 @@ jobs:
         working-directory: tests
         env:
           BASE_URL: http://localhost:3000
-        run: npm test -- --json --outputFile=test-results.json
+        run: NODE_OPTIONS=--experimental-vm-modules npm test -- --json --outputFile=test-results.json
 
       - name: Test PostgreSQL persistence
         run: |
